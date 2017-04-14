@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def welcome
-
+    @header = "BRUHHHHHHHUHUHUHUHUHUHU"
   end
 
   def about

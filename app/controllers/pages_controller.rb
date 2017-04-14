@@ -28,9 +28,9 @@ class PagesController < ApplicationController
   end
 
   def secrets
-    if :magic_word == "honeybaby"
-      # flash[:notice] = "Nice, you found the secret page!"
-      redirect_to '/secrets/:magic_word'
+    if params[:magic_word] == "honeybaby"
+      flash[:notice] = "Nice, you found the secret page!"
+      render 'secrets'
     else
       flash[:alert] = "You can't access this page."
       redirect_to '/'
